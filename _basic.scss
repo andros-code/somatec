@@ -1,0 +1,107 @@
+$shadowSimple: 0px 5px 8px -5px black;
+
+@mixin phones(){
+  @media (max-width: 576px){
+    @content;
+  }
+}
+@mixin tablets(){
+  @media (min-width: 768px){
+    @content;
+  }
+}
+@mixin desktops(){
+  @media (min-width: 992px){
+    @content;
+  }
+}
+@mixin large_desktops(){
+  @media (min-width: 1200px){
+    @content;
+  }
+}
+@mixin scrollbar($active:null){
+  @if $active == 'x'{
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  @if $active == 'y'{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  @if $active == null{
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  &::-webkit-scrollbar {
+      width: 4px !important;
+      height: 4px !important;
+      margin-left: -19px !important;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.5) !important;
+      border-radius: 4px !important;
+      margin-left: -9px !important;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: white !important;
+      box-shadow: 0 0 2px 1px rgba(0, 44, 33, 0) !important;
+    }
+    &::-webkit-scrollbar-thumb:active {
+      background-color: #333 !important;
+    }
+}
+
+@mixin flex($jc, $wrap:nowrap, $row:row, $align:center) {
+    display: flex;
+    flex-direction: $row;
+    flex-wrap: $wrap;
+    align-items: $align;
+    justify-content: $jc;
+}
+@mixin font($family:inherit, $size:inherit, $weight:inherit, $style:normal){
+  font-family: $family;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+}
+@mixin background($url, $size:cover, $position:center, $repeat:no-repeat, $color:black){
+  background: url($url);
+  background-repeat: $repeat;
+  background-size: $size;
+  background-position: $position;
+  background-color: $color;
+}
+@mixin minmax($size:'width', $min, $max:none){
+  @if $size == 'width' {
+    min-width: $min;
+    max-width: $max;
+  }
+  @if $size == 'height' {
+    min-height: $min;
+    max-height: $max;
+  }
+}
+@mixin size($h, $w, $min:null, $max:null ){
+  //('width: 35px', height:'35px')
+  width: $w;
+  height: $h;
+  @if $min != null {
+    @each $name, $val in $min {
+      @include minmax($name, $val);
+    }
+  }
+  @if $max != null {
+    @each $name2, $val2 in $max {
+      @include minmax($name2, none ,$val2);
+    }
+  }
+}
+@mixin newFont($family, $nameFile, $weight:300){
+  @font-face {
+    font-family: $family;
+    src: url("./assets/font/"+$nameFile) format("truetype");
+    font-weight: $weight;
+    font-display: block;
+  }
+}
