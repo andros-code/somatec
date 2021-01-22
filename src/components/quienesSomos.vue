@@ -49,7 +49,7 @@ export default {
       padding: 20px 0;
       text-align: left;
       margin-left: -5%;
-      margin-bottom: 20px;
+      height: auto;
     }
     .picture {
       max-width: 450px;

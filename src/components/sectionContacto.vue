@@ -220,8 +220,10 @@ export default {
       @include tablets() {
         padding: 10px;
       }
-      .icon-contact-item {
-        margin-left: 50px;
+      @include phones() {
+        .icon-contact-item {
+          margin-left: 50px;
+        }
       }
       .description-contact-item {
         display: flex;
@@ -253,7 +255,6 @@ export default {
   .two-div {
     @include flex(center, wrap);
     @include size(100%, 100%);
-
     div,
     form {
       @include size(
