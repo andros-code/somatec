@@ -10,7 +10,14 @@
           <li>Qué Hacemos</li>
           <li>Contáctanos</li>
           <li class="menu-icon" style="display:none">
-            Menu
+            <v-icon color="#000000">{{ svgPath }}</v-icon>
+            &nbsp;&nbsp; <span style="margin-left:5px">Menu</span>
+            <ul class="mini-menu">
+              <li>Inicio</li>
+              <li>¿Quiénes Somos?</li>
+              <li>Qué Hacemos</li>
+              <li>Contáctanos</li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -21,13 +28,15 @@
 <script>
 import logoCompleto from "@/assets/Somatec.png";
 import logoMin from "@/assets/logo.png";
+import { mdiMenu } from "@mdi/js";
 
 export default {
   name: "menuBar",
   data: function() {
     return {
       logo: "background-image:url(" + logoCompleto + ")",
-      logoMin: "background-image:url(" + logoMin + ")"
+      logoMin: "background-image:url(" + logoMin + ")",
+      svgPath: mdiMenu
     };
   },
   methods: {
@@ -61,10 +70,46 @@ export default {
 
 @include phones() {
   .menu li {
-    display: none;
+    display: none !important;
   }
   .menu .menu-icon {
-    display: block !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 110px;
+    margin-right: 50px;
+    .mini-menu {
+      display: none;
+      position: absolute;
+      bottom: -153px;
+      width: 200px;
+      background: #ffcc29;
+      border-left: solid 3px #3d64ad;
+
+      box-shadow: 3px 3px 30px -16px rgba(0, 0, 0, 0.75);
+      &:hover {
+        display: block;
+      }
+      li {
+        display: flex !important;
+        width: 90%;
+        height: 20px;
+        padding: 12px;
+        justify-content: flex-start;
+        align-items: center;
+        color: black;
+        border-left: solid 3px transparent;
+
+        &:hover {
+          border-bottom: solid 3px transparent;
+          border-left: #3d64ad 3px solid;
+        }
+      }
+    }
+    &:hover ul {
+      display: block;
+    }
   }
 }
 
@@ -81,18 +126,19 @@ header {
   @include flex(center, wrap);
 
   .logo {
-    @include size(180px, 350px);
+    @include size(150px, 330px);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
   }
   nav {
     width: 100%;
-    ul {
+    .menu {
       @include flex(center);
       @include size(45px, 100vw);
       background: white;
       list-style: none;
+
       li {
         @include flex(center);
         @include size(30px, auto);

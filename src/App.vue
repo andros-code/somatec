@@ -10,9 +10,9 @@
 import MenuBar from "./components/MenuBar.vue";
 import sectionHome from "./components/sectionHome.vue";
 import sectionContacto from "./components/sectionContacto.vue";
-
 export default {
   name: "App",
+
   components: {
     MenuBar,
     sectionHome,
