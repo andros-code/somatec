@@ -219,6 +219,7 @@ export default {
       width: 100%;
       @include tablets() {
         padding: 10px;
+        margin: 0px;
       }
       @include phones() {
         .icon-contact-item {

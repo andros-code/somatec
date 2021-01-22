@@ -4,6 +4,7 @@
     <sectionHome />
     <quienesSomos />
     <sectionContacto />
+    <sectionPlanes />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import MenuBar from "./components/MenuBar.vue";
 import sectionHome from "./components/sectionHome.vue";
 import sectionContacto from "./components/sectionContacto.vue";
 import quienesSomos from "./components/quienesSomos.vue";
+import sectionPlanes from "./components/sectionPlanes.vue";
 export default {
   name: "App",
 
@@ -19,7 +21,8 @@ export default {
     MenuBar,
     sectionHome,
     sectionContacto,
-    quienesSomos
+    quienesSomos,
+    sectionPlanes
   }
 };
 </script>

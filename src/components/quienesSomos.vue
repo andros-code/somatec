@@ -16,6 +16,7 @@
       </p>
       <div class="picture">
         <img id="img1" :src="img1" alt="Imagen de contexto" />
+        <div class="leyenda">LOREM IPSUM</div>
       </div>
     </article>
   </section>
@@ -54,16 +55,34 @@ export default {
     .picture {
       max-width: 450px;
       width: 45vw;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap !important;
 
       #img1 {
         width: 100%;
         height: 100%;
+      }
+
+      .leyenda {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        font-family: RobotoB;
+        font-size: 20px;
+        height: 20px;
       }
     }
     p {
       width: 48%;
       text-align: justify;
       padding: 2%;
+      font-family: Poppins !important;
+    }
+    @include phones() {
+      #img1 {
+        width: 90% !important;
+      }
     }
     @include tablets() {
       p {
