@@ -84,10 +84,10 @@ export default {
       position: absolute;
       bottom: -153px;
       width: 200px;
-      background: #ffcc29;
+      background: white;
       border-left: solid 3px #3d64ad;
 
-      box-shadow: 3px 3px 30px -16px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 3px 20px -16px rgba(0, 0, 0, 0.75);
       &:hover {
         display: block;
       }

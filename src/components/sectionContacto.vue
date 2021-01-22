@@ -37,6 +37,12 @@
               color="#000000"
             ></v-icon>
           </button>
+          <v-progress-circular
+            id="progress-email"
+            style="position:absolute; visibility:hidden;"
+            indeterminate
+            color="primary"
+          ></v-progress-circular>
           <v-alert
             :value="alert"
             type="success"
@@ -140,6 +146,11 @@ export default {
     },
     sendEmail: function(e) {
       if (this.validateMensaje == true) {
+        let progress = document.getElementById("progress-email");
+        let btn = document.querySelector(".btn-sendEmail");
+        btn.style.filter = "contrast(0)";
+        btn.disabled = true;
+        progress.style.visibility = "visible";
         emailjs
           .sendForm(
             "somattec.atencion",
@@ -149,6 +160,11 @@ export default {
           )
           .then(
             result => {
+              progress.style.visibility = "hidden";
+              console.log("SUCCESS!", result.status, result.text);
+              btn.disabled = false;
+              btn.style.filter = "none";
+
               this.alert = true;
               e.target[0].value = "";
               e.target[1].value = "";
@@ -156,7 +172,6 @@ export default {
               setTimeout(() => {
                 this.alert = false;
               }, 2500);
-              console.log("SUCCESS!", result.status, result.text);
             },
             error => {
               console.log("FAILED...", error);
@@ -174,6 +189,9 @@ export default {
 </script>
 <style lang="scss">
 @import "../../_basic.scss";
+#progress-email {
+  transition: all 0.2s ease-in-out;
+}
 #data-contact {
   @include flex(center);
   margin: 0 2%;
@@ -199,7 +217,12 @@ export default {
       justify-content: flex-start;
       align-items: center;
       width: 100%;
-
+      @include tablets() {
+        padding: 10px;
+      }
+      .icon-contact-item {
+        margin-left: 50px;
+      }
       .description-contact-item {
         display: flex;
         align-items: center;
@@ -208,6 +231,14 @@ export default {
         margin-left: 60px;
         width: 100%;
         margin-top: -31px;
+        @include tablets() {
+          font-size: 14px !important;
+          margin-left: 4%;
+          padding-left: 10%;
+        }
+        @include phones() {
+          font-size: 13px !important;
+        }
       }
     }
   }
@@ -236,6 +267,9 @@ export default {
     }
     #send-email {
       @include flex(center, wrap);
+      @include tablets() {
+        width: 80%;
+      }
       padding-top: 10px;
       input,
       textarea {
@@ -249,6 +283,7 @@ export default {
         outline: none;
         margin-bottom: 20px;
         box-shadow: 3px 3px 30px -16px rgba(0, 0, 0, 0.75);
+        min-width: 200px;
       }
 
       button {
@@ -261,10 +296,7 @@ export default {
         align-self: flex-end;
 
         @include tablets() {
-          margin: -30px -10px 20px 0 !important;
-          .enter-msj {
-            display: none;
-          }
+          margin: 0px 0px 30px 0 !important;
         }
       }
     }

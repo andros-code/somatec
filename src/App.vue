@@ -2,6 +2,7 @@
   <div id="app">
     <MenuBar />
     <sectionHome />
+    <quienesSomos />
     <sectionContacto />
   </div>
 </template>
@@ -10,29 +11,34 @@
 import MenuBar from "./components/MenuBar.vue";
 import sectionHome from "./components/sectionHome.vue";
 import sectionContacto from "./components/sectionContacto.vue";
+import quienesSomos from "./components/quienesSomos.vue";
 export default {
   name: "App",
 
   components: {
     MenuBar,
     sectionHome,
-    sectionContacto
+    sectionContacto,
+    quienesSomos
   }
 };
 </script>
 <style lang="scss">
-* {
-  padding: 0;
-  margin: 0;
-}
-body {
-  overflow-x: hidden;
-}
 @import "_basic.scss";
 @include newFont("Poppins", "Poppins-Regular.ttf");
 @include newFont("PoppinsB", "Poppins-SemiBold.ttf");
 @include newFont("RobotoB", "RobotoCondensed-Bold.ttf");
 @include newFont("Roboto", "RobotoCondensed-Regular.ttf");
+* {
+  padding: 0;
+  margin: 0;
+}
+#app {
+  overflow: hidden;
+}
+body {
+  overflow-x: hidden;
+}
 
 section {
   font-family: Roboto;
