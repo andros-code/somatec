@@ -5,6 +5,7 @@
     <quienesSomos />
     <sectionContacto />
     <sectionPlanes />
+    <FooterDown />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import sectionHome from "./components/sectionHome.vue";
 import sectionContacto from "./components/sectionContacto.vue";
 import quienesSomos from "./components/quienesSomos.vue";
 import sectionPlanes from "./components/sectionPlanes.vue";
+import FooterDown from "./components/FooterDown.vue";
 export default {
   name: "App",
 
@@ -22,7 +24,8 @@ export default {
     sectionHome,
     sectionContacto,
     quienesSomos,
-    sectionPlanes
+    sectionPlanes,
+    FooterDown
   }
 };
 </script>
