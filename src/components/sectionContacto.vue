@@ -34,14 +34,14 @@
             <v-icon
               style="margin-left:20px"
               v-text="enter"
-              color="#000000"
+              color="#ffffff"
             ></v-icon>
           </button>
           <v-progress-circular
             id="progress-email"
             style="position:absolute; visibility:hidden;"
             indeterminate
-            color="primary"
+            color="#000000"
           ></v-progress-circular>
           <v-alert
             :value="alert"
@@ -59,7 +59,7 @@
           <ul class="vertical-bar">
             <li>
               <div class="icon-contact-item">
-                <v-icon size="40px" color="#000000" v-text="whatsapp"></v-icon>
+                <v-icon size="40px" color="#ffffff" v-text="whatsapp"></v-icon>
                 <div class="description-contact-item">
                   <a href="https://wa.me/51934987211" target="_black">
                     <strong style="margin-left:0;">
@@ -71,7 +71,7 @@
             </li>
             <li>
               <div class="icon-contact-item">
-                <v-icon size="34px" color="#000000" v-text="email"></v-icon>
+                <v-icon size="34px" color="#ffffff" v-text="email"></v-icon>
                 <div class="description-contact-item">
                   Email:
                   <a href="mailto:somattec.atencion@gmail.com">
@@ -82,7 +82,7 @@
             </li>
             <li>
               <div class="icon-contact-item">
-                <v-icon size="30px" color="#000000" v-text="phone"></v-icon>
+                <v-icon size="30px" color="#ffffff" v-text="phone"></v-icon>
                 <div class="description-contact-item">
                   Telefonos de contacto: <br />
                   +51934987211 <br />
@@ -92,7 +92,7 @@
             </li>
             <li>
               <div class="icon-contact-item">
-                <v-icon size="34px" color="#000000" v-text="facebook"></v-icon>
+                <v-icon size="34px" color="#ffffff" v-text="facebook"></v-icon>
                 <div class="description-contact-item">
                   Facebook:
                   <a
@@ -208,8 +208,7 @@ export default {
     }
     a {
       text-decoration: none;
-      color: #000000;
-      font-style: bold;
+      color: white;
     }
     li {
       display: flex;
@@ -248,8 +247,9 @@ export default {
 }
 .contacto {
   @include size(auto, 100%);
-  background-color: #ffcc29;
+  background-color: rgb(61, 100, 173);
   padding: 20px 0;
+  color: white !important;
   h1 {
     margin-bottom: 30px;
   }

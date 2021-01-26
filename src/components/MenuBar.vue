@@ -5,18 +5,20 @@
       <nav>
         <ul class="menu">
           <div class="logo-menu" :style="logoMin"></div>
-          <li>Inicio</li>
-          <li>¿Quiénes Somos?</li>
-          <li>Qué Hacemos</li>
-          <li>Contáctanos</li>
+          <li @click="scrollMove('.presentacion')">Inicio</li>
+          <li @click="scrollMove('.quienesSomos')">¿Quiénes Somos?</li>
+          <li @click="scrollMove('.queHacemos')">¿Qué Hacemos?</li>
+          <li @click="scrollMove('#planes')">Planes</li>
+          <li @click="scrollMove('.contacto')">Contáctanos</li>
           <li class="menu-icon" style="display:none">
             <v-icon color="#000000">{{ svgPath }}</v-icon>
             &nbsp;&nbsp; <span style="margin-left:5px">Menu</span>
             <ul class="mini-menu">
-              <li>Inicio</li>
-              <li>¿Quiénes Somos?</li>
-              <li>Qué Hacemos</li>
-              <li>Contáctanos</li>
+              <li @click="scrollMove('.presentacion')">Inicio</li>
+              <li @click="scrollMove('.quienesSomos')">¿Quiénes Somos?</li>
+              <li @click="scrollMove('.queHacemos')">¿Qué Hacemos?</li>
+              <li @click="scrollMove('#planes')">Planes</li>
+              <li @click="scrollMove('.contacto')">Contáctanos</li>
             </ul>
           </li>
         </ul>
@@ -57,6 +59,13 @@ export default {
           logo.style.visibility = "hidden";
         }
       };
+    },
+    scrollMove(el) {
+      el = document.querySelector(el);
+      console.log(el);
+      let pos = el.getBoundingClientRect();
+      console.log(pos.top);
+      window.scroll(0, pos.top);
     }
   },
   mounted() {
@@ -82,7 +91,7 @@ export default {
     .mini-menu {
       display: none;
       position: absolute;
-      bottom: -153px;
+      bottom: -183px;
       width: 200px;
       background: white;
       border-left: solid 3px #3d64ad;
