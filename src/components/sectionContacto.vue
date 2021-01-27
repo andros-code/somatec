@@ -34,7 +34,7 @@
             <v-icon
               style="margin-left:20px"
               v-text="enter"
-              color="#ffffff"
+              color="#000000"
             ></v-icon>
           </button>
           <v-progress-circular
@@ -59,7 +59,7 @@
           <ul class="vertical-bar">
             <li>
               <div class="icon-contact-item">
-                <v-icon size="40px" color="#ffffff" v-text="whatsapp"></v-icon>
+                <v-icon size="40px" color="#000000" v-text="whatsapp"></v-icon>
                 <div class="description-contact-item">
                   <a href="https://wa.me/51934987211" target="_black">
                     <strong style="margin-left:0;">
@@ -71,7 +71,7 @@
             </li>
             <li>
               <div class="icon-contact-item">
-                <v-icon size="34px" color="#ffffff" v-text="email"></v-icon>
+                <v-icon size="34px" color="#000000" v-text="email"></v-icon>
                 <div class="description-contact-item">
                   Email:
                   <a href="mailto:somattec.atencion@gmail.com">
@@ -82,7 +82,7 @@
             </li>
             <li>
               <div class="icon-contact-item">
-                <v-icon size="30px" color="#ffffff" v-text="phone"></v-icon>
+                <v-icon size="30px" color="#000000" v-text="phone"></v-icon>
                 <div class="description-contact-item">
                   Telefonos de contacto: <br />
                   +51934987211 <br />
@@ -92,7 +92,7 @@
             </li>
             <li>
               <div class="icon-contact-item">
-                <v-icon size="34px" color="#ffffff" v-text="facebook"></v-icon>
+                <v-icon size="34px" color="#000000" v-text="facebook"></v-icon>
                 <div class="description-contact-item">
                   Facebook:
                   <a
@@ -111,7 +111,7 @@
 </template>
 <script>
 import emailjs from "emailjs-com";
-
+import img4 from "@/assets/logo.png";
 export default {
   name: "sectionContacto",
   data() {
@@ -122,7 +122,8 @@ export default {
       facebook: "fab fa-facebook",
       enter: "fa fa-paper-plane",
       alert: false,
-      validateMensaje: false
+      validateMensaje: false,
+      img4: "background-image:url(" + img4 + ")"
     };
   },
   methods: {
@@ -208,7 +209,7 @@ export default {
     }
     a {
       text-decoration: none;
-      color: white;
+      color: black;
     }
     li {
       display: flex;
@@ -247,9 +248,9 @@ export default {
 }
 .contacto {
   @include size(auto, 100%);
-  background-color: rgb(61, 100, 173);
+  background: rgb(242, 187, 87);
   padding: 20px 0;
-  color: white !important;
+  color: black !important;
   h1 {
     margin-bottom: 30px;
   }

@@ -1,6 +1,10 @@
 <template>
   <footer>
-    <div>© 2021 SOMATTEC | <a href="#"> About </a></div>
+    <div>
+      © 2021 SOMATTEC |
+
+      <a href="">About </a>
+    </div>
   </footer>
 </template>
 
@@ -16,7 +20,7 @@ export default {
 footer {
   margin-top: 40px;
   padding: 2%;
-  background: #ecf0f1;
+  background: rgb(226, 226, 226);
   color: gray;
   font-family: Roboto;
   @include flex(center);

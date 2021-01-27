@@ -50,14 +50,19 @@ export default {
 .presentacion {
   @include flex(flex-end);
   width: 100%;
+  background: rgb(242, 187, 87);
+  color: black;
+  @include phones() {
+  }
 }
 .presentacion .eslogan {
   font-size: 40px;
   @include flex(center);
   @include size(auto, 50vw);
-  padding: 0 1vw;
+  padding: 0 2vw;
   text-align: center;
   width: 100%;
+  background: transparent;
 }
 .presentacion .slider {
   width: 100vw;
@@ -78,7 +83,7 @@ export default {
   .presentacion .eslogan {
     width: 100%;
     height: auto;
-    padding: 10% 0;
+    padding: 5% 0;
     font-size: 30px;
   }
   .presentacion .slider {

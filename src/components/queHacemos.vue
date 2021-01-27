@@ -4,34 +4,25 @@
     <article>
       <ul>
         <li>
+          <h2>SOPORTE TÉCNICO</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
+            facere, corporis sint, molestias veritatis reiciendis repudiandae
+            quibusdam enim hic quis deleniti animi, soluta perspiciatis
+            molestiae magnam quos repellat amet!
+          </p>
+        </li>
+        <li>
+          <h2>ASISTENCIA REMOTA</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
+            facere, corporis sint, molestias veritatis reiciendis repudiandae
+            quibusdam enim hic quis deleniti animi, soluta perspiciatis
+            molestiae magnam quos repellat amet!
+          </p>
+        </li>
+        <li>
           <h2>Soporte Técnico</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
-            facere, corporis sint, molestias veritatis reiciendis repudiandae
-            quibusdam enim hic quis deleniti animi, soluta perspiciatis
-            molestiae magnam quos repellat amet!
-          </p>
-        </li>
-        <li>
-          <h2>Asistencia Remota</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
-            facere, corporis sint, molestias veritatis reiciendis repudiandae
-            quibusdam enim hic quis deleniti animi, soluta perspiciatis
-            molestiae magnam quos repellat amet!
-          </p>
-        </li>
-        <li>
-          <h2>Soporte Técnico</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
-            facere, corporis sint, molestias veritatis reiciendis repudiandae
-            quibusdam enim hic quis deleniti animi, soluta perspiciatis
-            molestiae magnam quos repellat amet!
-          </p>
-        </li>
-        <li>
-          <h2>Asistencia Remota</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
             facere, corporis sint, molestias veritatis reiciendis repudiandae
@@ -40,7 +31,7 @@
           </p>
         </li>
       </ul>
-      <div class="pictures" :style="img3"></div>
+      <div data-aos="fade-up" class="pictures" :style="img3"></div>
     </article>
   </section>
 </template>
@@ -63,7 +54,7 @@ export default {
 .queHacemos {
   padding: 20px 0 40px 0px;
   height: 100%;
-  background: rgb(239, 167, 57);
+  background: rgb(242, 187, 87);
   h1 {
     width: 100%;
     padding: 20px 0;
@@ -104,6 +95,10 @@ export default {
     ul {
       width: 90%;
       order: 1;
+    }
+    .pictures {
+      width: 100%;
+      max-height: 250px;
     }
   }
 }

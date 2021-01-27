@@ -46,6 +46,7 @@ export default {
   overflow: hidden;
 }
 body {
+  background: #ecf0f1;
   overflow-x: hidden;
 }
 
@@ -53,7 +54,7 @@ section {
   font-family: Roboto;
   width: 100%;
   background-color: #ecf0f1;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 h1 {
   width: 100%;

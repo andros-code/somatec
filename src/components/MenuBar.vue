@@ -30,8 +30,9 @@
 <script>
 import logoCompleto from "@/assets/Somatec.png";
 import logoMin from "@/assets/logo.png";
-import { mdiMenu } from "@mdi/js";
 
+import { mdiMenu } from "@mdi/js";
+const $ = require("jquery");
 export default {
   name: "menuBar",
   data: function() {
@@ -45,6 +46,7 @@ export default {
     menuFixed() {
       window.onscroll = function() {
         let yScroll = window.scrollY;
+
         let menu = document.querySelector("header nav");
         let logo = document.querySelector(".logo-menu");
 
@@ -53,19 +55,25 @@ export default {
           menu.style.top = "0";
           menu.style.position = "fixed";
           logo.style.visibility = "visible";
+          document.querySelector("header").style.paddingBottom = "45px";
         }
         if (yScroll < 180) {
           menu.style.position = "static";
           logo.style.visibility = "hidden";
+          document.querySelector("header").style.paddingBottom = "0px";
         }
       };
     },
     scrollMove(el) {
+      let position;
       el = document.querySelector(el);
-      console.log(el);
-      let pos = el.getBoundingClientRect();
-      console.log(pos.top);
-      window.scroll(0, pos.top);
+      position = el.offsetTop;
+      $("html, body").animate(
+        {
+          scrollTop: position - 30
+        },
+        500
+      );
     }
   },
   mounted() {
@@ -132,6 +140,8 @@ export default {
 }
 header {
   width: 100%;
+  background: #ecf0f1;
+  background-repeat: no-repeat;
   @include flex(center, wrap);
 
   .logo {
@@ -142,10 +152,11 @@ header {
   }
   nav {
     width: 100%;
+    background: #ecf0f1;
+    color: black;
     .menu {
       @include flex(center);
       @include size(45px, 100vw);
-      background: white;
       list-style: none;
 
       li {

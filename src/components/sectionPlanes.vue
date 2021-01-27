@@ -1,78 +1,69 @@
 <template>
-  <section id="planes">
+  <section id="planes" data-aos="fade-up">
     <h1>Planes Disponibles</h1>
     <article>
-      <div class="plan one">
-        <div class="promo">50%</div>
+      <div class="plan one" data-aos="slide-right">
+        <!--  <div class="promo">50%</div>
         <span class="name-promo"
           >Promoción navideña <br />
           Válido hasta el: 25/2/2021
         </span>
-
+      -->
         <h1 class="price">
-          <span class="before">150 S/s</span>
+          <!--<span class="before">100 S/s</span>-->
           <span class="now"> 100 S/s</span>
         </h1>
-        <h1 class="name">STANDARD</h1>
+        <h1 class="name">PLAN I</h1>
         <ul>
           <li>
             Asistencia remota 24/7<v-icon
               color="#27ae60"
               v-text="check"
+              size="15px"
             ></v-icon>
           </li>
           <li>
-            Soporte tecnico en sitio dos dias a la semana
-            <v-icon color="#27ae60" v-text="check"></v-icon>
+            Soporte tecnico en sitio un dia a la semana
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
         </ul>
       </div>
-      <div class="plan two">
+      <div class="plan two" data-aos="slide-up">
         <h1 class="price">
           <span class="now"> 100 S/s</span>
         </h1>
-        <h1 class="name">REMOTE</h1>
+        <h1 class="name">PLAN II</h1>
         <ul>
           <li>
             Asistencia remota 24/7<v-icon
               color="#27ae60"
               v-text="check"
+              size="15px"
             ></v-icon>
           </li>
           <li>
-            Soporte tecnico en sitio dos dias a la semana
-            <v-icon color="#27ae60" v-text="check"></v-icon>
+            Soporte tecnico en sitio siempre que sea necesario
+            <v-icon size="15px" color="#27ae60" v-text="check"></v-icon>
           </li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
         </ul>
       </div>
-      <div class="plan three">
+      <div class="plan three" data-aos="slide-left">
         <h1 class="price">
-          <span class="now"> 200 S/s</span>
+          <span class="now"> ?</span>
         </h1>
-        <h1 class="name">PRO</h1>
+        <h1 class="name">PLAN III</h1>
         <ul>
           <li>
             Asistencia remota 24/7<v-icon
               color="#27ae60"
               v-text="check"
+              size="15px"
             ></v-icon>
           </li>
           <li>
             Soporte tecnico en sitio dos dias a la semana
-            <v-icon color="#27ae60" v-text="check"></v-icon>
+            <v-icon size="15px" color="#27ae60" v-text="check"></v-icon>
           </li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
-          <li>Descripcion <v-icon color="#27ae60" v-text="check"></v-icon></li>
         </ul>
       </div>
     </article>
@@ -124,18 +115,18 @@ export default {
   margin-bottom: 70px;
 }
 #planes {
-  padding: 40px 0;
+  padding: 40px 0 60px 0;
 }
 h1 {
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 article {
   width: 100%;
   @include flex(space-around, wrap, center);
   .plan {
     margin: 20px 20px;
-    height: auto;
+    height: 380px;
     width: 30vw;
     max-width: 320px;
     min-width: 300px;
@@ -166,13 +157,10 @@ article {
     }
     ul {
       list-style: none;
-      margin-top: 20px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       align-items: flex-end;
-
-      padding-top: 20px;
       height: auto;
       li {
         border-bottom: solid 0.5px #95a5a6;

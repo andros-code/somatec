@@ -16,7 +16,7 @@
       </p>
       <div class="picture">
         <img id="img1" :src="img1" alt="Imagen de contexto" />
-        <div class="leyenda">LOREM IPSUM</div>
+        <div class="leyenda" data-aos="slide-left">SIEMPRE A TU SERVICIO</div>
       </div>
     </article>
   </section>
