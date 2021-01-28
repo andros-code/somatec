@@ -1,4 +1,4 @@
-# somattec-web
+# somatec-web
 
 ## Project setup
 ```
