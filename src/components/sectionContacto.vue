@@ -29,7 +29,7 @@
             required
           >
           </textarea>
-          <button class="btn-sendEmail" style="margin:5px;">
+          <button class="btn-sendEmail" style="margin:5px; position:relative;">
             <span class="enter-msj">Enviar Mensaje</span>
             <v-icon
               style="margin-left:20px"
@@ -47,7 +47,7 @@
             :value="alert"
             type="success"
             color="#4caf50"
-            style="margin-top:-170px; width:70%; min-width:200px; font-size:13px;"
+            style="position:absolute; width:300px; height:50px; min-width:200px; font-size:13px;"
             transition="scale-transition"
           >
             <span style="margin-left:10px; font-family:Roboto !important; ">
@@ -74,8 +74,8 @@
                 <v-icon size="34px" color="#000000" v-text="email"></v-icon>
                 <div class="description-contact-item">
                   Email:
-                  <a href="mailto:somattec.atencion@gmail.com">
-                    <strong>somattec.atencion@gmail.com</strong></a
+                  <a href="mailto:somatec.atencion@gmail.com">
+                    <strong>somatec.atencion@gmail.com</strong></a
                   >
                 </div>
               </div>
@@ -117,10 +117,11 @@ export default {
   data() {
     return {
       whatsapp: "fab fa-whatsapp",
-      phone: "fa fa-phone",
-      email: "fa fa-envelope",
       facebook: "fab fa-facebook",
+      email: "fa fa-envelope",
       enter: "fa fa-paper-plane",
+      phone: "fa fa-phone",
+
       alert: false,
       validateMensaje: false,
       img4: "background-image:url(" + img4 + ")"

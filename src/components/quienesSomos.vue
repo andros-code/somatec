@@ -3,16 +3,12 @@
     <article>
       <h1>¿Quiénes Somos?</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit veritatis
-        quo totam cupiditate soluta ipsum fugit facere provident assumenda sit,
-        quisquam similique repellendus animi dolorum iste laudantium deleniti
-        impedit reiciendis! Lorem ipsum dolor sit amet, consectetur adipisicing
-        elit. Harum perferendis totam dignissimos ex incidunt consectetur vero
-        dicta dolores, quisquam quo facilis sequi pariatur consequuntur, optio
-        saepe fuga illum aut repellendus. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Nam sequi repudiandae libero rerum soluta adipisci eum
-        veniam sed cumque aperiam fugiat molestias, labore beatae atque! Id
-        labore veniam debitis accusamus.
+        Somos una empresa dedicada a mantener de manera adecuada y segura la
+        infraestructura informática de su empresa, ofreciendo un servicio
+        garantizado, profesional y de calidad. Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Excepturi esse asperiores provident, hic
+        dolorem placeat vel necessitatibus architecto, praesentium sit ipsa
+        iusto vero aut aliquid autem magni natus laborum repellat.
       </p>
       <div class="picture">
         <img id="img1" :src="img1" alt="Imagen de contexto" />

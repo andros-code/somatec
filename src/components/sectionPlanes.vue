@@ -3,7 +3,7 @@
     <h1>Planes Disponibles</h1>
     <article>
       <div class="plan one" data-aos="slide-right">
-        <!--  <div class="promo">50%</div>
+        <!-- <div class="promo">50%</div>
         <span class="name-promo"
           >Promoción navideña <br />
           Válido hasta el: 25/2/2021
@@ -28,7 +28,7 @@
           </li>
         </ul>
       </div>
-      <div class="plan two" data-aos="slide-up">
+      <div class="plan two" data-aos="slide-down">
         <h1 class="price">
           <span class="now"> 100 S/s</span>
         </h1>
@@ -49,7 +49,10 @@
       </div>
       <div class="plan three" data-aos="slide-left">
         <h1 class="price">
-          <span class="now"> ?</span>
+          <span class="now" style="font-size:14px;"
+            >Unico <br />
+            Servicio</span
+          >
         </h1>
         <h1 class="name">PLAN III</h1>
         <ul>
@@ -59,10 +62,6 @@
               v-text="check"
               size="15px"
             ></v-icon>
-          </li>
-          <li>
-            Soporte tecnico en sitio dos dias a la semana
-            <v-icon size="15px" color="#27ae60" v-text="check"></v-icon>
           </li>
         </ul>
       </div>
