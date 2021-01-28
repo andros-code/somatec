@@ -22,7 +22,7 @@
           </p>
         </li>
         <li>
-          <h2>Soporte Técnico</h2>
+          <h2>PRESENCIA DIGITAL</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
             facere, corporis sint, molestias veritatis reiciendis repudiandae

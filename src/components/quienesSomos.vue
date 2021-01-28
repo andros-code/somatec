@@ -5,10 +5,11 @@
       <p>
         Somos una empresa dedicada a mantener de manera adecuada y segura la
         infraestructura informática de su empresa, ofreciendo un servicio
-        garantizado, profesional y de calidad. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Excepturi esse asperiores provident, hic
-        dolorem placeat vel necessitatibus architecto, praesentium sit ipsa
-        iusto vero aut aliquid autem magni natus laborum repellat.
+        garantizado, profesional y de calidad. tenemos amplia experiencia en
+        administracion de redes de computadoras, servicios de internet, soporte
+        a usuarios, gestión de centros de computo, capacitaciones en
+        informática, seguridad de la información, administración de servidores,
+        respaldo de la información, servicios de impresión, etc.
       </p>
       <div class="picture">
         <img id="img1" :src="img1" alt="Imagen de contexto" />

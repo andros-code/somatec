@@ -4,23 +4,15 @@
       © 2021 SOMATTEC |
       <div id="my-profile" style="position:absolute;visibility:hidden;">
         <h3>
-          <v-icon
-            size="20px"
-            color="#000000"
-            v-text="info"
-            style="margin-right:15px"
-          ></v-icon>
-          Detalles del Desarrollador
+          Detalles del Desarrollador _
         </h3>
         <div class="profile-container">
           <strong>Alejandro Gonzalez</strong>
-          <span style="font-size:12px; margin-left:-35px;">Fullstack Dev</span>
-          <div class="iconos">
-            <v-icon v-text="vue" size="18px"> </v-icon>
-            <v-icon v-text="node" size="18px"> </v-icon>
-            <v-icon v-text="mysql" size="18px"> </v-icon>
-            <v-icon v-text="git" size="18px"> </v-icon>
-          </div>
+          <i
+            ><a style="color:#3184d3;font-size:12px;" href="portafolios.io">
+              androstech.io
+            </a></i
+          >
           <!-- <div class="photo" :style="photo"></div> -->
         </div>
 
@@ -59,10 +51,7 @@ export default {
       info: "fab fa-dev",
       whatsapp: "fab fa-whatsapp",
       email: "fa fa-envelope",
-      vue: "fab fa-vuejs",
-      node: "fab fa-node",
-      mysql: "fas fa-database",
-      git: "fab fa-git-square",
+      portafolios: "fas fa-briefcase",
       toggle_info: false
       //photo: "background-image: url(" + photo + ");"
     };
@@ -100,12 +89,12 @@ footer {
   }
   #my-profile {
     @include flex(space-around, wrap, center);
-    box-shadow: 3px -10px 10px -16px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 30px -16px rgba(0, 0, 0, 0.75);
     padding: 35px 3px 25px 3px;
     background: rgb(226, 226, 226);
     width: 250px;
     color: black;
-    top: -130px;
+    top: -110px;
     left: -50px;
     position: relative;
     .iconos {
@@ -127,7 +116,7 @@ footer {
     }
     h3 {
       width: 100%;
-      background: rgb(206, 205, 205);
+      background: #d8d8d8;
       @include flex(center);
       position: absolute;
       top: 0;
@@ -153,7 +142,7 @@ footer {
         padding-top: 3px;
       }
       a:hover {
-        color: rgb(186, 69, 240);
+        color: #3184d3;
       }
       list-style: none;
     }

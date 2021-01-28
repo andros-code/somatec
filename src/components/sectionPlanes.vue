@@ -23,7 +23,7 @@
             ></v-icon>
           </li>
           <li>
-            Soporte tecnico en sitio un dia a la semana
+            Soporte técnico en sitio un dia a la semana
             <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
         </ul>
@@ -42,22 +42,19 @@
             ></v-icon>
           </li>
           <li>
-            Soporte tecnico en sitio siempre que sea necesario
+            Soporte técnico en sitio siempre que sea necesario
             <v-icon size="15px" color="#27ae60" v-text="check"></v-icon>
           </li>
         </ul>
       </div>
       <div class="plan three" data-aos="slide-left">
         <h1 class="price">
-          <span class="now" style="font-size:14px;"
-            >Unico <br />
-            Servicio</span
-          >
+          <span class="now" style="font-size:35px;"> Servicio único</span>
         </h1>
         <h1 class="name">PLAN III</h1>
         <ul>
           <li>
-            Asistencia remota 24/7<v-icon
+            Asistencia personalizada<v-icon
               color="#27ae60"
               v-text="check"
               size="15px"
@@ -147,7 +144,7 @@ article {
       .now {
         order: 0;
         font-style: bold;
-        font-size: 45px !important;
+        font-size: 45px;
       }
     }
     .name {
