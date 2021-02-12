@@ -4,16 +4,14 @@
     <article>
       <ul>
         <li>
-          <h2>SOPORTE TÉCNICO</h2>
+          <h2>MANTENIMIENTO DE EQUIPOS</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
-            facere, corporis sint, molestias veritatis reiciendis repudiandae
-            quibusdam enim hic quis deleniti animi, soluta perspiciatis
-            molestiae magnam quos repellat amet!
+            Realizamos mantenimientos preventivos y correctivos de sus
+            computadoras y equipos de cómputo con personal especializado.
           </p>
         </li>
         <li>
-          <h2>ASISTENCIA REMOTA</h2>
+          <h2>REPARACIÓN DE EQUIPOS</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
             facere, corporis sint, molestias veritatis reiciendis repudiandae

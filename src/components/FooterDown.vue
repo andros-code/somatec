@@ -4,17 +4,8 @@
       © 2021 SOMATTEC |
       <div id="my-profile" style="position:absolute;visibility:hidden;">
         <h3>
-          Detalles del Desarrollador _
+          Desarrollador
         </h3>
-        <div class="profile-container">
-          <strong>Alejandro Gonzalez</strong>
-          <i
-            ><a style="color:#3184d3;font-size:12px;" href="portafolios.io">
-              androstech.io
-            </a></i
-          >
-          <!-- <div class="photo" :style="photo"></div> -->
-        </div>
 
         <ul alt="desarrollador de la pagina">
           <li>
@@ -83,7 +74,7 @@ footer {
   background: rgb(226, 226, 226);
   color: gray;
   font-family: Roboto;
-
+  text-align: center;
   > div {
     position: relative;
   }
@@ -92,11 +83,15 @@ footer {
     box-shadow: 3px 3px 30px -16px rgba(0, 0, 0, 0.75);
     padding: 35px 3px 25px 3px;
     background: rgb(226, 226, 226);
-    width: 250px;
     color: black;
     top: -110px;
-    left: -50px;
+    left: 100px;
     position: relative;
+    padding: 10px;
+    padding-top: 30px;
+    height: 90px;
+    width: 150px;
+
     .iconos {
       padding: 10px 5px 5px 5px;
       width: 100%;
@@ -140,6 +135,7 @@ footer {
       li {
         font-size: 12px;
         padding-top: 3px;
+        text-align: left;
       }
       a:hover {
         color: #3184d3;

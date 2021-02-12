@@ -2,18 +2,21 @@
   <section id="planes" data-aos="fade-up">
     <h1>Planes Disponibles</h1>
     <article>
+      <p class="planes-descripcion">
+        Diseñamos planes de soporte técnico personalizados en base a las
+        necesidades y presupuesto de cada empresa, de esta manera, Usted
+        dispondrá de una gama de servicios de Tecnología de Información y
+        Soporte en la modalidad de tercerización y/o outsourcing de personal.
+        Nuestro servicio incluye actividades básicas de la primera línea de
+        soporte, así como actividades avanzadas que requieren niveles de
+        especialización mas altos. Como parte de este servicio, según el plan
+        diseñado y establecido, podemos incluir las siguientes actividades:
+      </p>
+
       <div class="plan one" data-aos="slide-right">
-        <!-- <div class="promo">50%</div>
-        <span class="name-promo"
-          >Promoción navideña <br />
-          Válido hasta el: 25/2/2021
-        </span>
-      -->
         <h1 class="price">
-          <!--<span class="before">100 S/s</span>-->
-          <span class="now"> 100 S/s</span>
+          <span class="now">EMPRESARIAL</span>
         </h1>
-        <h1 class="name">PLAN I</h1>
         <ul>
           <li>
             Asistencia remota 24/7<v-icon
@@ -26,13 +29,24 @@
             Soporte técnico en sitio un dia a la semana
             <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
+          <li>
+            Gestión de copias de seguridad de información
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
+          <li>
+            Administración de servidores
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
+          <li>
+            Monitoreo de sistemas antivirus
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
         </ul>
       </div>
       <div class="plan two" data-aos="slide-down">
         <h1 class="price">
-          <span class="now"> 100 S/s</span>
+          <span class="now">EMPRESARIAL</span>
         </h1>
-        <h1 class="name">PLAN II</h1>
         <ul>
           <li>
             Asistencia remota 24/7<v-icon
@@ -42,23 +56,50 @@
             ></v-icon>
           </li>
           <li>
-            Soporte técnico en sitio siempre que sea necesario
-            <v-icon size="15px" color="#27ae60" v-text="check"></v-icon>
+            Soporte técnico en sitio un dia a la semana
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
+          <li>
+            Gestión de copias de seguridad de información
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
+          <li>
+            Administración de servidores
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
+          <li>
+            Monitoreo de sistemas antivirus
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
         </ul>
       </div>
       <div class="plan three" data-aos="slide-left">
         <h1 class="price">
-          <span class="now" style="font-size:35px;"> Servicio único</span>
+          <span class="now">EMPRESARIAL</span>
         </h1>
-        <h1 class="name">PLAN III</h1>
         <ul>
           <li>
-            Asistencia personalizada<v-icon
+            Asistencia remota 24/7<v-icon
               color="#27ae60"
               v-text="check"
               size="15px"
             ></v-icon>
+          </li>
+          <li>
+            Soporte técnico en sitio un dia a la semana
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
+          <li>
+            Gestión de copias de seguridad de información
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
+          <li>
+            Administración de servidores
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
+          </li>
+          <li>
+            Monitoreo de sistemas antivirus
+            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
         </ul>
       </div>
@@ -120,9 +161,22 @@ h1 {
 article {
   width: 100%;
   @include flex(space-around, wrap, center);
+  .planes-descripcion {
+    font-size: 17px;
+    font-family: Poppins;
+    text-align: justify;
+    padding: 5vw;
+  }
+  .task-list {
+    width: 100%;
+    font-size: 17px;
+    font-family: Poppins;
+    padding: 0 5vw;
+    list-style: none;
+  }
   .plan {
     margin: 20px 20px;
-    height: 380px;
+    height: auto;
     width: 30vw;
     max-width: 320px;
     min-width: 300px;
@@ -143,8 +197,9 @@ article {
       }
       .now {
         order: 0;
-        font-style: bold;
-        font-size: 45px;
+        font-size: 25px;
+        font-family: PoppinsB;
+        font-weight: 900;
       }
     }
     .name {

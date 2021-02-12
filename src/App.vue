@@ -49,7 +49,9 @@ body {
   background: #ecf0f1;
   overflow-x: hidden;
 }
-
+*::selection {
+  background: #f2bb57;
+}
 section {
   font-family: Roboto;
   width: 100%;
