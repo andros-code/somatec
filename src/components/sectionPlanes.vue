@@ -9,13 +9,15 @@
         Soporte en la modalidad de tercerización y/o outsourcing de personal.
         Nuestro servicio incluye actividades básicas de la primera línea de
         soporte, así como actividades avanzadas que requieren niveles de
-        especialización mas altos. Como parte de este servicio, según el plan
-        diseñado y establecido, podemos incluir las siguientes actividades:
+        especialización mas altos. Hemos diseñados los siguientes planes para
+        ofrecer un servicio de calidad que se ajuste tanto a nivel empresarial
+        como domestico.
       </p>
 
       <div class="plan one" data-aos="slide-right">
         <h1 class="price">
-          <span class="now">EMPRESARIAL</span>
+          <img :src="plan" alt="logo plan empresa" />
+          <span class="now">PROFESIONAL</span>
         </h1>
         <ul>
           <li>
@@ -43,9 +45,10 @@
           </li>
         </ul>
       </div>
-      <div class="plan two" data-aos="slide-down">
+      <div class="plan two" data-aos="slide-right">
         <h1 class="price">
-          <span class="now">EMPRESARIAL</span>
+          <img :src="plan" alt="logo plan domestico" />
+          <span class="now">PROFESIONAL II</span>
         </h1>
         <ul>
           <li>
@@ -56,7 +59,7 @@
             ></v-icon>
           </li>
           <li>
-            Soporte técnico en sitio un dia a la semana
+            Soporte técnico en sitio cada vez que sea necesario
             <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
           <li>
@@ -75,44 +78,48 @@
       </div>
       <div class="plan three" data-aos="slide-left">
         <h1 class="price">
-          <span class="now">EMPRESARIAL</span>
+          <img :src="plan3" alt="logo plan unico" />
+          <span class="now">UNICO SERVICIO</span>
         </h1>
         <ul>
           <li>
-            Asistencia remota 24/7<v-icon
-              color="#27ae60"
-              v-text="check"
-              size="15px"
-            ></v-icon>
-          </li>
-          <li>
-            Soporte técnico en sitio un dia a la semana
-            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
-          </li>
-          <li>
-            Gestión de copias de seguridad de información
-            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
-          </li>
-          <li>
-            Administración de servidores
-            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
-          </li>
-          <li>
-            Monitoreo de sistemas antivirus
+            Recibe asistencia personalizada.
             <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
         </ul>
+        <span @click="scrollMove('.contacto')" class="contact-ref"
+          >Consulta ahora
+          <v-icon size="25px" color="#ffffff">fas fa-chevron-down</v-icon></span
+        >
       </div>
     </article>
   </section>
 </template>
 <script>
+import plan3 from "@/assets/person.png";
+import plan from "@/assets/servi.png";
+const $ = require("jquery");
 export default {
   name: "sectionPlanes",
   data() {
     return {
-      check: "fas fa-check-circle"
+      check: "fas fa-check-circle",
+      plan3: plan3,
+      plan: plan
     };
+  },
+  methods: {
+    scrollMove(el) {
+      let position;
+      el = document.querySelector(el);
+      position = el.offsetTop;
+      $("html, body").animate(
+        {
+          scrollTop: position - 30
+        },
+        500
+      );
+    }
   }
 };
 </script>
@@ -175,18 +182,19 @@ article {
     list-style: none;
   }
   .plan {
-    margin: 20px 20px;
     height: auto;
     width: 30vw;
+    height: 470px;
     max-width: 320px;
     min-width: 300px;
     background: white;
     box-shadow: 3px 3px 20px -16px rgba(0, 0, 0, 0.75);
     position: relative;
-    padding-bottom: 40px;
+    @include flex(flex-start, wrap, flex-start);
+
     .price {
       @include flex(center, wrap);
-      margin-top: 25px;
+
       .before {
         font-size: 17px;
         color: gray;
@@ -195,16 +203,21 @@ article {
         margin-left: 12%;
         order: 1;
       }
+      img {
+        margin-top: -20px;
+      }
       .now {
         order: 0;
         font-size: 25px;
         font-family: PoppinsB;
         font-weight: 900;
+        width: 100%;
+        margin-bottom: 20px;
       }
     }
     .name {
       font-size: 25px;
-      margin-top: 50px;
+      margin-top: 5px;
     }
     ul {
       list-style: none;
@@ -229,6 +242,21 @@ article {
       margin: 20px 10px;
       border-radius: 0px;
     }
+  }
+  .three {
+    background-color: #3d64ad;
+    color: white;
+
+    ul {
+      li {
+        border-bottom: solid 1px white;
+      }
+    }
+  }
+  .contact-ref {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
   }
 }
 </style>

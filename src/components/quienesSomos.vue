@@ -9,7 +9,7 @@
         administracion de redes de computadoras, servicios de internet, soporte
         a usuarios, gestión de centros de computo, capacitaciones en
         informática, seguridad de la información, administración de servidores,
-        respaldo de la información, servicios de impresión, etc.
+        respaldo de la información, servicios de impresión y mucho más.
       </p>
       <div class="picture">
         <img id="img1" :src="img1" alt="Imagen de contexto" />

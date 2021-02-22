@@ -85,8 +85,8 @@
                 <v-icon size="30px" color="#000000" v-text="phone"></v-icon>
                 <div class="description-contact-item">
                   Telefonos de contacto: <br />
-                  +51934987211 <br />
-                  +51 000 000 000
+                  +51 934 987 211 <br />
+                  +51 981 280 152
                 </div>
               </div>
             </li>
@@ -96,9 +96,9 @@
                 <div class="description-contact-item">
                   Facebook:
                   <a
-                    href="https://www.facebook.com/@somattec-3wwe/"
+                    href="https://www.facebook.com/Somatec-112059380925664"
                     target="_black"
-                    ><strong>@somattec-3wwe</strong></a
+                    ><strong>@somatec.TI</strong></a
                   >
                 </div>
               </div>

@@ -7,6 +7,7 @@
     <sectionPlanes />
     <sectionContacto />
     <FooterDown />
+    <FloatButtons />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import quienesSomos from "./components/quienesSomos.vue";
 import sectionPlanes from "./components/sectionPlanes.vue";
 import queHacemos from "./components/queHacemos.vue";
 import FooterDown from "./components/FooterDown.vue";
+import FloatButtons from "./components/FloatButtons.vue";
 export default {
   name: "App",
 
@@ -28,7 +30,8 @@ export default {
     quienesSomos,
     sectionPlanes,
     FooterDown,
-    queHacemos
+    queHacemos,
+    FloatButtons
   }
 };
 </script>
@@ -50,7 +53,8 @@ body {
   overflow-x: hidden;
 }
 *::selection {
-  background: #f2bb57;
+  background: #3d64ad;
+  color: white;
 }
 section {
   font-family: Roboto;
