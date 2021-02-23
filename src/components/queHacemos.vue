@@ -4,28 +4,29 @@
     <article>
       <ul>
         <li>
-          <h2>MANTENIMIENTO DE EQUIPOS</h2>
+          <h2>Mantenimientos de equipos</h2>
           <p>
-            Realizamos mantenimientos preventivos y correctivos de sus
-            computadoras y equipos de cómputo con personal especializado.
+            Realizamos trabajos de mantenimiento preventivo y correctivo para tu
+            hogar o tu negocio, preparamos todos tus dispositivos para el día a
+            día, instalamos programas, respaldamos información y te brindamos
+            toda la asistencia que necesitas.
           </p>
         </li>
         <li>
-          <h2>REPARACIÓN DE EQUIPOS</h2>
+          <h2>Reparación de equipos</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
-            facere, corporis sint, molestias veritatis reiciendis repudiandae
-            quibusdam enim hic quis deleniti animi, soluta perspiciatis
-            molestiae magnam quos repellat amet!
+            Tenemos amplia experiencia en el diagnostico y reparación de los
+            equipos de computo de tu hogar o empresa. podemos resolver cualquier
+            insurgencia ya sea en el hardware o software.
           </p>
         </li>
         <li>
-          <h2>PRESENCIA DIGITAL</h2>
+          <h2>Diseñamos páginas web</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo saepe
-            facere, corporis sint, molestias veritatis reiciendis repudiandae
-            quibusdam enim hic quis deleniti animi, soluta perspiciatis
-            molestiae magnam quos repellat amet!
+            Somos profesionales en el desarrollo de tu presencia digital,
+            creamos tu pagina web a la medida, adaptable a todos tus
+            dispositivos y acceso inmediato a sus redes sociales con enlaces
+            directos para consultar todos tus productos o servicios.
           </p>
         </li>
       </ul>
@@ -59,11 +60,16 @@ export default {
     text-align: center;
     height: auto;
   }
+  h2 {
+    margin-bottom: 10px;
+    font-family: PoppinsB;
+  }
   article {
     width: 100%;
     height: 100%;
     @include flex(space-around, wrap, flex-start);
     flex-wrap: wrap;
+
     .pictures {
       order: 2;
       width: 50%;
@@ -74,13 +80,15 @@ export default {
   }
   ul {
     order: 3;
+
     > p {
       margin-top: -20px;
     }
     width: 48%;
     text-align: justify;
-    padding: 2%;
+    padding: 5%;
     font-family: PoppinsB;
+
     li {
       list-style: none;
       font-family: Poppins;

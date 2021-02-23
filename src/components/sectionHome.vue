@@ -10,6 +10,9 @@
           <splide-slide>
             <img class="slider-img" :src="slider.img2" />
           </splide-slide>
+          <splide-slide>
+            <img class="slider-img" :src="slider.img3" />
+          </splide-slide>
         </splide>
       </div>
     </div>
@@ -18,6 +21,7 @@
 <script>
 import img1 from "@/assets/slider/1.jpg";
 import img2 from "@/assets/slider/2.jpg";
+import img3 from "@/assets/slider/3.jpg";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
@@ -32,6 +36,7 @@ export default {
       slider: {
         img1: img1,
         img2: img2,
+        img3: img3,
         options: {
           autoplay: true,
           interval: 3000,
@@ -79,12 +84,14 @@ export default {
 @media screen and (max-width: 852px) {
   .presentacion {
     flex-wrap: wrap;
+    background: transparent;
   }
   .presentacion .eslogan {
     width: 100%;
-    height: auto;
-    padding: 5% 0;
+    height: 70px;
+    padding: 0% 0;
     font-size: 30px;
+    background: transparent;
   }
   .presentacion .slider {
     width: 100%;

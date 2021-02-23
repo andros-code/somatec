@@ -2,7 +2,7 @@
   <section id="planes" data-aos="fade-up">
     <h1>Planes Disponibles</h1>
     <article>
-      <p class="planes-descripcion">
+      <!--<p class="planes-descripcion">
         Diseñamos planes de soporte técnico personalizados en base a las
         necesidades y presupuesto de cada empresa, de esta manera, Usted
         dispondrá de una gama de servicios de Tecnología de Información y
@@ -12,9 +12,9 @@
         especialización mas altos. Hemos diseñados los siguientes planes para
         ofrecer un servicio de calidad que se ajuste tanto a nivel empresarial
         como domestico.
-      </p>
+      </p>-->
 
-      <div class="plan one" data-aos="slide-right">
+      <div class="plan one">
         <h1 class="price">
           <img :src="plan" alt="logo plan empresa" />
           <span class="now">PROFESIONAL</span>
@@ -31,21 +31,14 @@
             Soporte técnico en sitio un dia a la semana
             <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
+
           <li>
-            Gestión de copias de seguridad de información
-            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
-          </li>
-          <li>
-            Administración de servidores
-            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
-          </li>
-          <li>
-            Monitoreo de sistemas antivirus
+            Diseño web a la medida
             <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
         </ul>
       </div>
-      <div class="plan two" data-aos="slide-right">
+      <div class="plan two">
         <h1 class="price">
           <img :src="plan" alt="logo plan domestico" />
           <span class="now">PROFESIONAL II</span>
@@ -62,21 +55,14 @@
             Soporte técnico en sitio cada vez que sea necesario
             <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
+
           <li>
-            Gestión de copias de seguridad de información
-            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
-          </li>
-          <li>
-            Administración de servidores
-            <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
-          </li>
-          <li>
-            Monitoreo de sistemas antivirus
+            Diseño web a la medida
             <v-icon color="#27ae60" size="15px" v-text="check"></v-icon>
           </li>
         </ul>
       </div>
-      <div class="plan three" data-aos="slide-left">
+      <div class="plan three">
         <h1 class="price">
           <img :src="plan3" alt="logo plan unico" />
           <span class="now">UNICO SERVICIO</span>

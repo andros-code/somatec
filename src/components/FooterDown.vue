@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div>
-      © 2021 SOMATTEC |
+      © 2021 SOMATTEC
       <div id="my-profile" style="position:absolute;visibility:hidden;">
         <h3>
           Desarrollador
@@ -23,12 +23,6 @@
           </li>
         </ul>
       </div>
-      <span
-        class="about"
-        style=" color:black;cursor:pointer;"
-        @mouseup="showHidden"
-        >About
-      </span>
     </div>
   </footer>
 </template>
