@@ -57,8 +57,7 @@ export default {
   width: 100%;
   background: rgb(242, 187, 87);
   color: black;
-  @include phones() {
-  }
+  margin-top: -60px;
 }
 .presentacion .eslogan {
   font-size: 40px;

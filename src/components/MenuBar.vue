@@ -2,23 +2,27 @@
   <div class="MenuBar">
     <header>
       <div class="logo" :style="logo"></div>
+      <!-- <div class="contacto-rapido">
+           <div><v-icon color="#000000">mdi-phone</v-icon> CONTÁCTENOS:  </div>
+           <h5 style=" color:#3D64AD; font-size:12px; font-weight:900; margin-left:30px;">+51934987211</h5>
+      </div>-->
       <nav>
         <ul class="menu">
           <div class="logo-menu" :style="logoMin"></div>
-          <li @click="scrollMove('.presentacion')">Inicio</li>
-          <li @click="scrollMove('.quienesSomos')">¿Quiénes Somos?</li>
-          <li @click="scrollMove('.queHacemos')">¿Qué Hacemos?</li>
-          <li @click="scrollMove('#planes')">Planes</li>
-          <li @click="scrollMove('.contacto')">Contáctanos</li>
+          <li @click="scrollMove('.presentacion')">INICIO</li>
+          <li @click="scrollMove('.quienesSomos')">QUIÉNES SOMOS</li>
+          <li @click="scrollMove('.queHacemos')">NUESTROS SERVICIOS</li>
+          <li @click="scrollMove('#planes')">PLANES</li>
+          <li @click="scrollMove('.contacto')">CONTÁCTANOS</li>
           <li class="menu-icon" style="display:none">
             <v-icon color="#000000">{{ svgPath }}</v-icon>
-            &nbsp;&nbsp; <span style="margin-left:5px">Menu</span>
+            &nbsp;&nbsp; <span style="margin-left:5px">MENU</span>
             <ul class="mini-menu">
-              <li @click="scrollMove('.presentacion')">Inicio</li>
-              <li @click="scrollMove('.quienesSomos')">¿Quiénes Somos?</li>
-              <li @click="scrollMove('.queHacemos')">¿Qué Hacemos?</li>
-              <li @click="scrollMove('#planes')">Planes</li>
-              <li @click="scrollMove('.contacto')">Contáctanos</li>
+              <li @click="scrollMove('.presentacion')">INICIO</li>
+              <li @click="scrollMove('.quienesSomos')">QUIÉNES SOMOS</li>
+              <li @click="scrollMove('.queHacemos')">NUESTROS SERVICIOS</li>
+              <li @click="scrollMove('#planes')">PLANES</li>
+              <li @click="scrollMove('.contacto')">CONTÁCTANOS</li>
             </ul>
           </li>
         </ul>
@@ -140,15 +144,26 @@ export default {
 }
 header {
   width: 100%;
+  height: 200px;
   background: #ecf0f1;
   background-repeat: no-repeat;
   @include flex(center, wrap);
 
   .logo {
-    @include size(150px, 330px);
+    @include size(130px, 310px);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+  .contacto-rapido {
+    width: 200px;
+    height: 100px;
+
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-family: PoppinsB;
+    font-size: 13px;
   }
   nav {
     width: 100%;
@@ -164,10 +179,14 @@ header {
         @include size(30px, auto);
         @include font(PoppinsB, 14px);
         transition: all 0.3s ease-in-out;
-        margin: 10px;
+        margin: 0 10px;
         padding: 0px;
         border-bottom: solid transparent 2px;
+        font-size: 14px;
         cursor: pointer;
+        @include tablets() {
+          font-size: 12px;
+        }
         &:hover {
           border-color: black;
         }

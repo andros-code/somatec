@@ -47,10 +47,18 @@ export default {
 }
 #app {
   overflow: hidden;
+  min-width: 280px;
+}
+p {
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 17px;
+  max-width: 1280px;
 }
 body {
   background: #ecf0f1;
   overflow-x: hidden;
+  min-width: 280px;
 }
 *::selection {
   background: #3d64ad;
@@ -61,6 +69,7 @@ section {
   width: 100%;
   background-color: #ecf0f1;
   margin-top: 50px;
+  min-width: 280px;
 }
 h1 {
   width: 100%;

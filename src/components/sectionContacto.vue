@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <section class="global">
     <div class="contacto">
       <h1>
-        Contáctanos
+        CONTÁCTANOS
       </h1>
       <div class="two-div">
         <form id="send-email" @submit.prevent="sendEmail">
@@ -56,54 +56,7 @@
           </v-alert>
         </form>
         <div id="data-contact">
-          <ul class="vertical-bar">
-            <li>
-              <div class="icon-contact-item">
-                <v-icon size="40px" color="#000000" v-text="whatsapp"></v-icon>
-                <div class="description-contact-item">
-                  <a href="https://wa.me/51934987211" target="_black">
-                    <strong style="margin-left:0;">
-                      Comunícate con nosotros ahora!
-                    </strong>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="icon-contact-item">
-                <v-icon size="34px" color="#000000" v-text="email"></v-icon>
-                <div class="description-contact-item">
-                  Email:
-                  <a href="mailto:somatec.atencion@gmail.com">
-                    <strong>somatec.atencion@gmail.com</strong></a
-                  >
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="icon-contact-item">
-                <v-icon size="30px" color="#000000" v-text="phone"></v-icon>
-                <div class="description-contact-item">
-                  Telefonos de contacto: <br />
-                  +51 934 987 211 <br />
-                  +51 981 280 152
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="icon-contact-item">
-                <v-icon size="34px" color="#000000" v-text="facebook"></v-icon>
-                <div class="description-contact-item">
-                  Facebook:
-                  <a
-                    href="https://www.facebook.com/Somatec-112059380925664"
-                    target="_black"
-                    ><strong>@somatec.TI</strong></a
-                  >
-                </div>
-              </div>
-            </li>
-          </ul>
+          <div data-aos="fade-up" class="pictures" :style="img3"></div>
         </div>
       </div>
     </div>
@@ -112,6 +65,7 @@
 <script>
 import emailjs from "emailjs-com";
 import img4 from "@/assets/logo.png";
+import img3 from "@/assets/img3.jpg";
 export default {
   name: "sectionContacto",
   data() {
@@ -121,10 +75,10 @@ export default {
       email: "fa fa-envelope",
       enter: "fa fa-paper-plane",
       phone: "fa fa-phone",
-
       alert: false,
       validateMensaje: false,
-      img4: "background-image:url(" + img4 + ")"
+      img4: "background-image:url(" + img4 + ")",
+      img3: "background-image: url(" + img3 + ")"
     };
   },
   methods: {
@@ -191,12 +145,22 @@ export default {
 </script>
 <style lang="scss">
 @import "../../_basic.scss";
+.global {
+  display: flex;
+}
 #progress-email {
   transition: all 0.2s ease-in-out;
 }
+
 #data-contact {
   @include flex(center);
   margin: 0 2%;
+  .pictures {
+    width: 50%;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+  }
   .vertical-bar {
     list-style: none;
     width: auto;
@@ -249,9 +213,11 @@ export default {
 }
 .contacto {
   @include size(auto, 100%);
-  background: rgb(242, 187, 87);
+  background: #f2bb57;
   padding: 20px 0;
+  order: 1;
   color: black !important;
+
   h1 {
     margin-bottom: 30px;
   }
@@ -270,7 +236,8 @@ export default {
       );
     }
     #send-email {
-      @include flex(center, wrap);
+      @include flex(center, wrap, space-between);
+      flex-direction: column;
       @include tablets() {
         width: 80%;
       }
@@ -285,11 +252,13 @@ export default {
         width: 80%;
         resize: none;
         outline: none;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         box-shadow: 3px 3px 30px -16px rgba(0, 0, 0, 0.75);
         min-width: 200px;
       }
-
+      textarea {
+        margin-bottom: 40px;
+      }
       button {
         display: flex;
         justify-content: center;
@@ -297,8 +266,9 @@ export default {
         width: 200px;
         outline: none;
         font-family: PoppinsB;
-        align-self: flex-end;
-
+        align-self: center;
+        position: absolute;
+        top: -30px;
         @include tablets() {
           margin: 0px 0px 30px 0 !important;
         }

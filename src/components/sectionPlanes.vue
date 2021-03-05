@@ -1,6 +1,6 @@
 <template>
   <section id="planes" data-aos="fade-up">
-    <h1>Planes Disponibles</h1>
+    <h1>PLANES DISPONIBLES</h1>
     <article>
       <!--<p class="planes-descripcion">
         Diseñamos planes de soporte técnico personalizados en base a las

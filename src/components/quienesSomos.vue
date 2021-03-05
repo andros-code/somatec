@@ -1,15 +1,16 @@
 <template>
   <section class="quienesSomos">
     <article>
-      <h1>¿Quiénes Somos?</h1>
+      <h1>QUIÉNES SOMOS</h1>
       <p>
-        Somos una empresa dedicada a mantener de manera adecuada y segura la
-        infraestructura informática de su empresa, ofreciendo un servicio
-        garantizado, profesional y de calidad. tenemos amplia experiencia en
+        Somos una empresa que brinda servicios y soluciones en Tecnologías de la
+        Información, dirigido a hogares, pequeñas y medianas empresas,
+        respaldado por personal capacitado. Tenemos amplia experiencia en
         administracion de redes de computadoras, servicios de internet, soporte
-        a usuarios, gestión de centros de computo, capacitaciones en
-        informática, seguridad de la información, administración de servidores,
-        respaldo de la información, servicios de impresión y mucho más.
+        a usuarios, gestión de centros de computo, seguridad de la información,
+        administración de servidores, respaldo de la información, instalación y
+        mantenimiento de cámaras de seguridad, desarrollo de paginas web, entre
+        otros.
       </p>
       <div class="picture">
         <img id="img1" :src="img1" alt="Imagen de contexto" />
