@@ -5,6 +5,7 @@
     <quienesSomos />
     <queHacemos />
     <sectionPlanes />
+    <nuestrosClientes />
     <sectionContacto />
     <FooterDown />
     <FloatButtons />
@@ -20,6 +21,7 @@ import sectionPlanes from "./components/sectionPlanes.vue";
 import queHacemos from "./components/queHacemos.vue";
 import FooterDown from "./components/FooterDown.vue";
 import FloatButtons from "./components/FloatButtons.vue";
+
 export default {
   name: "App",
 

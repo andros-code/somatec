@@ -1,19 +1,7 @@
 <template>
-  <section id="planes" data-aos="fade-up">
+  <section id="planes" data-aos="fade-down">
     <h1>PLANES DISPONIBLES</h1>
     <article>
-      <!--<p class="planes-descripcion">
-        Diseñamos planes de soporte técnico personalizados en base a las
-        necesidades y presupuesto de cada empresa, de esta manera, Usted
-        dispondrá de una gama de servicios de Tecnología de Información y
-        Soporte en la modalidad de tercerización y/o outsourcing de personal.
-        Nuestro servicio incluye actividades básicas de la primera línea de
-        soporte, así como actividades avanzadas que requieren niveles de
-        especialización mas altos. Hemos diseñados los siguientes planes para
-        ofrecer un servicio de calidad que se ajuste tanto a nivel empresarial
-        como domestico.
-      </p>-->
-
       <div class="plan one">
         <h1 class="price">
           <img :src="plan" alt="logo plan empresa" />
@@ -84,6 +72,7 @@
 <script>
 import plan3 from "@/assets/person.png";
 import plan from "@/assets/servi.png";
+//import backText from "@/assets/texture2.png";
 const $ = require("jquery");
 export default {
   name: "sectionPlanes",
@@ -92,6 +81,7 @@ export default {
       check: "fas fa-check-circle",
       plan3: plan3,
       plan: plan
+      //backText: "background-image:url(" + backText + ")"
     };
   },
   methods: {
@@ -111,6 +101,9 @@ export default {
 </script>
 <style lang="scss">
 @import "../../_basic.scss";
+#planes {
+  background-repeat: repeat;
+}
 .promo {
   width: 0px;
   height: 110px;

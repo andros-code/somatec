@@ -1,7 +1,9 @@
 <template>
   <section>
     <div class="presentacion">
-      <h1 class="eslogan">La mejor CALIDAD y al mejor PRECIO</h1>
+      <h1 class="eslogan">
+        La mejor CALIDAD y al mejor PRECIO
+      </h1>
       <div class="slider">
         <splide :options="slider.options">
           <splide-slide>
@@ -24,7 +26,7 @@ import img2 from "@/assets/slider/2.jpg";
 import img3 from "@/assets/slider/3.jpg";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-
+//import backTexture from "@/assets/texture3.png";
 export default {
   name: "sectionHome",
   components: {
@@ -37,6 +39,7 @@ export default {
         img1: img1,
         img2: img2,
         img3: img3,
+        //backTexture: "background-image: url(" + backTexture + ")",
         options: {
           autoplay: true,
           interval: 3000,
